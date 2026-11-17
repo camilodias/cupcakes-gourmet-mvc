@@ -1,0 +1,28 @@
+{
+  "name": "cupcakes-gourmet-mvc",
+  "version": "1.0.0",
+  "description": "E-Commerce de Cupcakes Gourmet — Arquitetura MVC (Node.js, Express e SQLite)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/unit_and_integration.test.js",
+    "db:reset": "node src/config/resetDb.js"
+  },
+  "keywords": [
+    "cupcakes-gourmet",
+    "mvc",
+    "ecommerce",
+    "engenharia-de-software",
+    "nodejs",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

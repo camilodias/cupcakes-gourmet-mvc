@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Cupcakes Gourmet — Confeitaria Artesanal &amp; Cardápio Digital</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧁</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#fcf9f4",
+            "surface-variant": "#e5e2dd",
+            "background": "#fcf9f4",
+            "on-primary-fixed-variant": "#8e0d33",
+            "surface-container-high": "#ebe8e3",
+            "on-secondary": "#ffffff",
+            "tertiary": "#236537",
+            "inverse-surface": "#31302d",
+            "outline": "#8b7073",
+            "on-surface": "#1c1c19",
+            "surface-container-highest": "#e5e2dd",
+            "on-background": "#1c1c19",
+            "tertiary-fixed": "#adf3b8",
+            "surface-bright": "#fcf9f4",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-container": "#f0ede9",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#400011",
+            "surface-dim": "#dcdad5",
+            "on-surface-variant": "#584143",
+            "inverse-primary": "#ffb2bb",
+            "primary": "#a72444",
+            "primary-fixed-dim": "#ffb2bb",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#dfbfc1",
+            "on-tertiary-fixed": "#00210b",
+            "tertiary-container": "#3d7e4d",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#755c60",
+            "on-secondary-fixed": "#28171a",
+            "tertiary-fixed-dim": "#92d69d",
+            "secondary-fixed": "#fbdbde",
+            "surface-container-low": "#f6f3ee",
+            "on-tertiary-fixed-variant": "#0a5226",
+            "secondary-container": "#f8d8dc",
+            "surface-tint": "#af2a49",
+            "secondary-fixed-dim": "#debfc3",
+            "primary-container": "#c83e5b",
+            "on-primary-container": "#fff4f4",
+            "primary-fixed": "#ffd9dc",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f3f0eb",
+            "on-secondary-fixed-variant": "#574144",
+            "on-tertiary-container": "#dfffdf",
+            "secondary": "#70585c"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin-desktop": "2.5rem",
+            "gutter-desktop": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "4rem"
+          },
+          fontFamily: {
+            "display-lg": ["Playfair Display", "serif"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "display-lg-mobile": ["Playfair Display", "serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Playfair Display", "serif"],
+            "price-tag": ["Playfair Display", "serif"],
+            "headline-lg-mobile": ["Playfair Display", "serif"]
+          },
+          fontSize: {
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "price-tag": ["22px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="min-h-screen flex flex-col bg-surface font-body-md text-on-surface antialiased">
+
+  <!-- === Header === -->
+  <header class="sticky top-0 z-50 bg-surface-container-lowest border-b border-surface-variant shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="/" onclick="navegarParaTela('vitrine'); return false;" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-[#FAF2EB] flex items-center justify-center text-[#a72444] group-hover:scale-105 transition-transform">
+            <svg class="w-6 h-6 fill-current text-[#a72444]" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C10.89 2 10 2.89 10 4C10 4.17 10.03 4.33 10.07 4.49C8.36 4.93 7.07 6.4 7.01 8.21C5.28 8.65 4 10.22 4 12.1C4 14.25 5.75 16 7.9 16H16.1C18.25 16 20 14.25 20 12.1C20 10.22 18.72 8.65 16.99 8.21C16.93 6.4 15.64 4.93 13.93 4.49C13.97 4.33 14 4.17 14 4C14 2.89 13.11 2 12 2Z" fill="currentColor" fill-opacity="0.2"></path>
+              <path d="M12 3C11.45 3 11 3.45 11 4C11 4.14 11.03 4.27 11.08 4.39C9.77 4.79 8.79 5.95 8.62 7.37C7.21 7.74 6.17 9.02 6.17 10.55C6.17 12.3 7.59 13.72 9.34 13.72H14.66C16.41 13.72 17.83 12.3 17.83 10.55C17.83 9.02 16.79 7.74 15.38 7.37C15.21 5.95 14.23 4.79 12.92 4.39C12.97 4.27 13 4.14 13 4C13 3.45 12.55 3 12 3ZM7 15L8.5 21H15.5L17 15H7Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm font-bold text-[20px] text-on-surface leading-none tracking-tight">Cupcakes Gourmet</span>
+            <span class="text-[11px] text-on-surface-variant font-medium tracking-wide mt-0.5">Confeitaria Artesanal</span>
+          </div>
+        </a>
+        <span class="hidden sm:inline-flex items-center gap-1.5 bg-[#ecf4ee] text-[#2e6f40] px-2.5 py-0.5 text-xs font-medium rounded-full ml-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#2e6f40]"></span>
+          Aberto
+        </span>
+      </div>
+
+      <div class="hidden md:flex flex-1 max-w-[440px] mx-2">
+        <div class="relative w-full">
+          <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+          <input
+            id="input-busca"
+            type="search"
+            placeholder="Buscar sabores ou ingredientes..."
+            oninput="aoDigitarBusca(this.value)"
+            class="w-full bg-surface border border-surface-variant rounded-xl pl-10 pr-4 py-2 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+          />
+        </div>
+      </div>
+
+      <nav class="flex items-center gap-3 sm:gap-4 shrink-0" aria-label="Navegação principal">
+        <button
+          type="button"
+          id="nav-link-vitrine"
+          onclick="navegarParaTela('vitrine')"
+          class="hidden lg:inline-flex text-primary font-semibold border-b-2 border-primary pb-0.5 text-sm hover:text-primary transition-colors"
+        >
+          Cardápio
+        </button>
+
+        <button
+          type="button"
+          id="nav-link-pedidos"
+          onclick="navegarParaTela('pedidos')"
+          class="hidden lg:flex items-center gap-1.5 text-sm text-on-surface-variant hover:text-primary transition-colors font-medium pb-0.5"
+        >
+          <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          <span>Meus Pedidos</span>
+        </button>
+
+        <button
+          type="button"
+          id="btn-filtro-favoritos-topo"
+          onclick="alternarFiltroFavoritos()"
+          class="flex items-center gap-1.5 border border-[#E5E0D8] rounded-lg px-3 py-2 text-sm text-on-surface hover:bg-surface transition-colors font-medium"
+          title="Filtrar apenas cupcakes favoritados"
+        >
+          <span class="material-symbols-outlined text-[18px] text-[#a72444]" id="icone-favoritos-topo">favorite</span>
+          <span class="hidden sm:inline">Favoritos</span>
+          <span class="text-xs text-on-surface-variant">(<span id="contador-favoritos">0</span>)</span>
+        </button>
+
+        <button
+          type="button"
+          id="btn-header-sacola"
+          onclick="navegarParaTela('sacola')"
+          class="bg-[#a72444] text-white font-medium rounded-xl px-4 py-2 hover:bg-[#8f1d39] shadow-sm flex items-center gap-2 text-sm transition-all"
+        >
+          <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          <span>Sacola (<span id="badge-qtd-header">0</span>) &bull; <span id="header-valor-carrinho">R$ 0,00</span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Conteúdo Principal === -->
+  <main class="flex-1 w-full pb-24 lg:pb-12 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
+
+      <!-- === Tela 1: Loja / Vitrine === -->
+      <section id="tela-vitrine" class="flex flex-col gap-space-lg min-w-0">
+
+        <div class="md:hidden">
+          <div class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+            <input
+              id="input-busca-mobile"
+              type="search"
+              placeholder="Buscar sabores, ingredientes..."
+              oninput="aoDigitarBusca(this.value)"
+              class="w-full bg-surface-container-lowest rounded-lg pl-10 pr-4 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+            />
+          </div>
+        </div>
+
+        <!-- === Banners em Destaque === -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-5" aria-label="Promoções e Embalagens">
+          <article class="bg-[#FBF8F3] border border-[#EBE6DE] rounded-2xl overflow-hidden flex flex-col sm:flex-row items-stretch shadow-xs min-h-[210px]">
+            <div class="flex-1 p-5 flex flex-col justify-center">
+              <div>
+                <span class="inline-block bg-[#FAF2EB] text-[#A25729] font-bold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md">
+                  DESCONTO AUTOMÁTICO NA SACOLA
+                </span>
+                <h2 class="font-headline-sm text-[19px] font-bold text-on-surface leading-snug mt-2">
+                  Monte sua Caixa com até 20% OFF
+                </h2>
+                <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mt-1">
+                  4+ un. (10% OFF) &bull; 8+ un. (15% OFF) &bull; 12+ un. (20% OFF) + Frete Grátis acima de R$ 120.
+                </p>
+              </div>
+            </div>
+            <div class="w-full sm:w-52 h-44 sm:h-auto min-h-[210px] shrink-0 relative overflow-hidden">
+              <img
+                src="/images/banner-combos.png"
+                alt="Caixa artesanal com 4 cupcakes selecionados"
+                class="sm:absolute sm:inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </article>
+
+          <article class="bg-[#F6F8F5] border border-[#DFE5DE] rounded-2xl overflow-hidden flex flex-col sm:flex-row items-stretch shadow-xs min-h-[210px]">
+            <div class="flex-1 p-5 flex flex-col justify-center">
+              <div>
+                <span class="inline-block bg-[#EBF3ED] text-[#2E6F40] font-bold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-md">
+                  ENTREGA SEGURA &amp; PRESENTE
+                </span>
+                <h2 class="font-headline-sm text-[19px] font-bold text-on-surface leading-snug mt-2">
+                  Proteção Anti-Transpiração &amp; Caixa Presente
+                </h2>
+                <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mt-1">
+                  Embalagem individual com cúpula protetora que preserva a umidade da massa e o glacê no transporte, com opção de caixa rígida para presente na sacola.
+                </p>
+              </div>
+            </div>
+            <div class="w-full sm:w-52 h-44 sm:h-auto min-h-[210px] shrink-0 relative overflow-hidden">
+              <img
+                src="/images/banner-embalagem.png"
+                alt="Embalagem protetora individual e caixa presente com laço de cetim bordô"
+                class="sm:absolute sm:inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </article>
+        </section>
+
+        <!-- === Filtros === -->
+        <div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+          <div class="flex items-center gap-space-sm overflow-x-auto pb-space-xs text-on-surface no-scrollbar">
+            <button type="button" class="cat-tab px-space-md py-2 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-lg text-label-lg transition-all shrink-0" data-tipo="" onclick="selecionarAbaTipo(this, '')">
+              Todos (<span id="total-catalogo-aba">12</span>)
+            </button>
+            <button type="button" class="cat-tab px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" data-tipo="DOCE" onclick="selecionarAbaTipo(this, 'DOCE')">
+              Doces Clássicos
+            </button>
+            <button type="button" class="cat-tab px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" data-tipo="SALGADO" onclick="selecionarAbaTipo(this, 'SALGADO')">
+              Salgados Artesanais
+            </button>
+            <button type="button" class="cat-tab px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" data-destaque="destaque" onclick="selecionarAbaDestaque(this, 'destaque')">
+              Destaques &amp; Novidades
+            </button>
+            <button type="button" class="cat-tab px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" data-destaque="mais_vendido" onclick="selecionarAbaDestaque(this, 'mais_vendido')">
+              Mais Vendidos
+            </button>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+            <div class="flex flex-wrap items-center gap-space-xs">
+              <span class="font-label-md text-label-md text-on-surface-variant mr-space-xs">Preferências:</span>
+              <button type="button" id="chip-sem-gluten" onclick="alternarChipDietetico('sem_gluten')" class="diet-chip flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-colors">
+                <span class="material-symbols-outlined text-[16px] text-tertiary">spa</span>
+                <span>Sem Glúten</span>
+              </button>
+              <button type="button" id="chip-zero-lactose" onclick="alternarChipDietetico('zero_lactose')" class="diet-chip flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-colors">
+                <span class="material-symbols-outlined text-[16px] text-tertiary">water_drop</span>
+                <span>Zero Lactose</span>
+              </button>
+              <button type="button" id="chip-zero-acucar" onclick="alternarChipDietetico('zero_acucar')" class="diet-chip flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-colors">
+                <span class="material-symbols-outlined text-[16px] text-tertiary">nutrition</span>
+                <span>Zero Açúcar</span>
+              </button>
+              <button type="button" id="chip-vegano" onclick="alternarChipDietetico('vegano')" class="diet-chip flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-colors">
+                <span class="material-symbols-outlined text-[16px] text-tertiary">eco</span>
+                <span>Vegano</span>
+              </button>
+              <button type="button" id="chip-apenas-favoritos" onclick="alternarFiltroFavoritos()" class="diet-chip flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container text-label-md font-label-md transition-colors">
+                <span class="material-symbols-outlined text-[16px] text-primary">favorite</span>
+                <span>Favoritos</span>
+              </button>
+            </div>
+
+            <div class="flex items-center bg-surface-container-low p-1 rounded-lg shrink-0" id="seletor-tamanho">
+              <button type="button" data-tamanho="" onclick="selecionarTamanho(this, '')" class="size-tab px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface text-label-md font-label-md shadow-sm font-semibold transition-all">
+                Todos
+              </button>
+              <button type="button" data-tamanho="Mini (45g)" onclick="selecionarTamanho(this, 'Mini (45g)')" class="size-tab px-2.5 py-1 rounded-md text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-colors">
+                Mini 45g
+              </button>
+              <button type="button" data-tamanho="Tradicional (90g)" onclick="selecionarTamanho(this, 'Tradicional (90g)')" class="size-tab px-2.5 py-1 rounded-md text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-colors">
+                Tradicional 90g
+              </button>
+              <button type="button" data-tamanho="Gourmet Duplo (130g)" onclick="selecionarTamanho(this, 'Gourmet Duplo (130g)')" class="size-tab px-2.5 py-1 rounded-md text-label-md font-label-md text-on-surface-variant hover:text-on-surface transition-colors">
+                Duplo 130g
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-1">
+            <span id="contador-resultados">Carregando cardápio...</span>
+            <button type="button" onclick="limparTodosFiltros()" class="font-label-md text-primary hover:underline flex items-center gap-1">
+              <span class="material-symbols-outlined text-[15px]">restart_alt</span>
+              Limpar filtros
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="grid-cupcakes" aria-live="polite"></div>
+      </section>
+
+      <!-- === Tela 2: Sacola & Entrega === -->
+      <section id="tela-sacola" class="hidden flex flex-col gap-space-lg min-w-0">
+        <div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest rounded-xl px-space-md py-space-sm shadow-sm">
+          <button type="button" onclick="navegarParaTela('vitrine')" class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:underline">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Continuar Comprando</span>
+          </button>
+          <div class="flex items-center gap-2 font-label-md text-label-md">
+            <span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">1. Sacola &amp; Entrega</span>
+            <span class="text-outline">&rarr;</span>
+            <span class="text-on-surface-variant">2. Pagamento</span>
+            <span class="text-outline">&rarr;</span>
+            <span class="text-on-surface-variant">3. Acompanhamento</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+          <div class="lg:col-span-7 flex flex-col gap-space-lg">
+            <div class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-space-md">
+              <div class="flex items-center justify-between pb-space-xs border-b border-surface-variant">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-[24px]">shopping_bag</span>
+                  <h2 class="font-headline-sm text-headline-sm text-on-surface">Sua Sacola Gourmet</h2>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span id="badge-qtd-sacola" class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md">
+                    0 itens
+                  </span>
+                  <button
+                    type="button"
+                    id="btn-esvaziar-sacola"
+                    onclick="esvaziarCarrinho()"
+                    title="Esvaziar sacola"
+                    class="hidden text-outline hover:text-error transition-colors p-1"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+                <div class="flex items-center justify-between gap-2 text-on-surface">
+                  <span class="font-body-sm text-[12px] font-semibold flex items-center gap-1" id="texto-progresso-combo">
+                    <span class="material-symbols-outlined text-primary text-[16px]">percent</span>
+                    Adicione 4 cupcakes para 10% OFF!
+                  </span>
+                  <span class="font-label-md text-label-md text-primary font-bold shrink-0" id="label-progresso-combo">0 de 4</span>
+                </div>
+                <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+                  <div id="barra-progresso-combo" class="bg-primary h-full rounded-full transition-all duration-500" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div id="lista-itens-carrinho" class="flex flex-col gap-space-sm"></div>
+            </div>
+
+            <div class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-space-sm">
+              <h3 class="font-title-md text-title-md text-on-surface">Embalagem &amp; Presente</h3>
+              <div id="opcoes-embalagem" class="grid grid-cols-1 gap-2"></div>
+
+              <div id="bloco-agendamento-presente" class="hidden bg-surface-container p-3 rounded-lg flex flex-col gap-2 mt-1">
+                <div class="flex items-center gap-1.5 text-primary font-label-md text-[12px]">
+                  <span class="material-symbols-outlined text-[16px]">card_giftcard</span>
+                  <span>Agendamento &amp; Dedicatória para Presente</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <input
+                    type="date"
+                    id="input-data-agendamento"
+                    aria-label="Data de Agendamento"
+                    class="w-full bg-surface-container-lowest text-on-surface rounded px-2.5 py-2 font-body-sm text-[12px] focus:outline-none focus:ring-1 focus:ring-primary"
+                  />
+                  <select
+                    id="select-periodo-agendamento"
+                    aria-label="Período de Agendamento"
+                    class="w-full bg-surface-container-lowest text-on-surface rounded px-2.5 py-2 font-body-sm text-[12px] focus:outline-none focus:ring-1 focus:ring-primary"
+                  >
+                    <option value="Manhã (09h - 12h)">Manhã (09h - 12h)</option>
+                    <option value="Tarde (14h - 17h)">Tarde (14h - 17h)</option>
+                    <option value="Noite (18h - 20h)">Noite (18h - 20h)</option>
+                  </select>
+                </div>
+                <textarea
+                  id="input-mensagem-presente"
+                  rows="2"
+                  placeholder="Mensagem personalizada para o cartão artesanal..."
+                  class="w-full bg-surface-container-lowest text-on-surface rounded p-2.5 font-body-sm text-[12px] placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary resize-none"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5 lg:sticky lg:top-24 bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-md flex flex-col gap-space-md">
+            <h3 class="font-title-md text-title-md text-on-surface">Modalidade &amp; Resumo</h3>
+
+            <div class="flex flex-col gap-space-xs">
+              <div class="grid grid-cols-2 gap-1 bg-surface-container-low p-1 rounded-lg text-center">
+                <button type="button" id="btn-modo-entrega" onclick="selecionarTipoEntrega('ENTREGA')" class="py-2 px-2 rounded-md bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm font-semibold flex items-center justify-center gap-1 transition-all">
+                  <span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span>
+                  <span>Entrega (Delivery)</span>
+                </button>
+                <button type="button" id="btn-modo-retirada" onclick="selecionarTipoEntrega('RETIRADA')" class="py-2 px-2 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-all">
+                  <span class="material-symbols-outlined text-[16px]">storefront</span>
+                  <span>Retirar na Loja</span>
+                </button>
+              </div>
+
+              <div id="bloco-cep-entrega" class="flex flex-col gap-2 mt-1">
+                <div class="flex items-center gap-2">
+                  <div class="relative flex-1">
+                    <span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-secondary">pin_drop</span>
+                    <input
+                      type="text"
+                      id="input-cep"
+                      maxlength="9"
+                      placeholder="00000-000"
+                      oninput="aoDigitarCep(this)"
+                      class="w-full bg-surface-container-low rounded-lg pl-8 pr-2.5 py-2 font-body-sm text-[12px] text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    onclick="calcularFreteNoCarrinho()"
+                    class="px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant font-label-md text-[12px] text-primary font-semibold transition-colors shrink-0"
+                  >
+                    Calcular
+                  </button>
+                </div>
+
+                <div id="resultado-frete-box" class="hidden px-2.5 py-1.5 rounded-lg text-[11px] font-body-sm"></div>
+
+                <input
+                  type="text"
+                  id="input-endereco-entrega"
+                  placeholder="Endereço completo (Rua, número, complemento)"
+                  class="w-full bg-surface-container-low rounded-lg px-3 py-2 font-body-sm text-[12px] text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+
+                <div class="flex items-center gap-1 text-tertiary px-1">
+                  <span class="material-symbols-outlined text-[14px]">thermostat</span>
+                  <span class="font-body-sm text-[11px]">Transporte Refrigerado</span>
+                </div>
+              </div>
+
+              <div id="bloco-info-retirada" class="hidden bg-surface-container-low px-3 py-2.5 rounded-lg text-on-surface flex flex-col gap-0.5 mt-1">
+                <span class="font-label-md text-[12px] text-tertiary font-semibold flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[15px]">storefront</span>
+                  Loja Cupcakes Gourmet — Jardins
+                </span>
+                <span class="font-body-sm text-[11px] text-on-surface-variant">
+                  Av. Paulista, 1578 &bull; Pronto em 25 min para retirada no balcão.
+                </span>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5 text-on-surface">
+              <div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+                <span>Subtotal (<span id="resumo-qtd-itens">0</span> itens)</span>
+                <span id="resumo-subtotal">R$ 0,00</span>
+              </div>
+              <div class="flex items-center justify-between font-body-sm text-body-sm text-tertiary">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">sell</span>
+                  <span id="resumo-nome-combo">Desconto Combo</span>
+                </span>
+                <span id="resumo-valor-desconto">- R$ 0,00</span>
+              </div>
+              <div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+                <span id="resumo-nome-embalagem">Embalagem Protetora</span>
+                <span id="resumo-valor-embalagem" class="text-tertiary font-semibold">Grátis</span>
+              </div>
+              <div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+                <span>Taxa de Entrega Express</span>
+                <span id="resumo-valor-frete">R$ 0,00</span>
+              </div>
+              <div class="h-[1px] bg-surface-variant my-1"></div>
+              <div class="flex items-center justify-between text-on-surface">
+                <span class="font-title-md text-title-md font-bold">Total Estimado</span>
+                <span id="resumo-valor-total" class="font-price-tag text-price-tag text-primary">R$ 0,00</span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onclick="avancarParaPagamento()"
+              class="w-full py-3.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-lg flex items-center justify-between transition-all group"
+            >
+              <span class="font-semibold">Avançar para Pagamento</span>
+              <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+            </button>
+
+            <div class="flex items-center justify-center gap-1.5 text-on-surface-variant font-body-sm text-[11px]">
+              <span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+              <span id="sacola-previsao-entrega">Previsão de entrega: ~30-45 min</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- === Tela 3: Checkout & Pagamento === -->
+      <section id="tela-pagamento" class="hidden flex flex-col gap-space-lg min-w-0">
+        <div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest rounded-xl px-space-md py-space-sm shadow-sm">
+          <button type="button" onclick="navegarParaTela('sacola')" class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:underline">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Voltar para a Sacola</span>
+          </button>
+          <div class="flex items-center gap-2 font-label-md text-label-md">
+            <button type="button" onclick="navegarParaTela('sacola')" class="text-tertiary hover:underline">1. Sacola &amp; Entrega</button>
+            <span class="text-outline">&rarr;</span>
+            <span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">2. Pagamento</span>
+            <span class="text-outline">&rarr;</span>
+            <span class="text-on-surface-variant">3. Acompanhamento</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+          <div class="lg:col-span-7 flex flex-col gap-space-lg">
+            <div class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-2 pb-2 border-b border-surface-variant">
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">Seus Dados</h2>
+                <button
+                  type="button"
+                  onclick="preencherDadosTesteSandbox()"
+                  class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-[12px] font-semibold transition-colors"
+                >
+                  <span class="material-symbols-outlined text-[15px]">bolt</span>
+                  <span>Preencher dados de teste</span>
+                </button>
+              </div>
+              <input
+                type="text"
+                id="input-cliente-nome"
+                placeholder="Nome completo *"
+                class="w-full bg-surface-container-low rounded-lg px-3 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary"
+              />
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input
+                  type="email"
+                  id="input-cliente-email"
+                  placeholder="Seu e-mail *"
+                  class="w-full bg-surface-container-low rounded-lg px-3 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+                <input
+                  type="text"
+                  id="input-cliente-telefone"
+                  placeholder="(00) 00000-0000 *"
+                  class="w-full bg-surface-container-low rounded-lg px-3 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+            </div>
+
+            <div class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-3">
+              <h2 class="font-headline-sm text-headline-sm text-on-surface pb-2 border-b border-surface-variant">Forma de Pagamento</h2>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <button type="button" data-metodo="PIX" onclick="selecionarMetodoPagamento(this, 'PIX')" class="pay-card active flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container-lowest shadow-sm ring-1 ring-primary text-on-surface transition-all">
+                  <span class="material-symbols-outlined text-[24px] text-tertiary">qr_code_2</span>
+                  <span class="font-label-md text-[12px] font-semibold mt-1">Pix Direto</span>
+                </button>
+                <button type="button" data-metodo="CARTAO_CREDITO" onclick="selecionarMetodoPagamento(this, 'CARTAO_CREDITO')" class="pay-card flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all">
+                  <span class="material-symbols-outlined text-[24px] text-primary">credit_card</span>
+                  <span class="font-label-md text-[12px] mt-1">Cartão de Crédito</span>
+                </button>
+                <button type="button" data-metodo="CARTAO_DEBITO" onclick="selecionarMetodoPagamento(this, 'CARTAO_DEBITO')" class="pay-card flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all">
+                  <span class="material-symbols-outlined text-[24px] text-secondary">payments</span>
+                  <span class="font-label-md text-[12px] mt-1">Cartão de Débito</span>
+                </button>
+                <button type="button" data-metodo="APPLE_PAY" onclick="selecionarMetodoPagamento(this, 'APPLE_PAY')" class="pay-card flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all">
+                  <span class="material-symbols-outlined text-[24px] text-on-surface">phone_iphone</span>
+                  <span class="font-label-md text-[12px] mt-1">Apple Pay</span>
+                </button>
+                <button type="button" data-metodo="GOOGLE_PAY" onclick="selecionarMetodoPagamento(this, 'GOOGLE_PAY')" class="pay-card flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all col-span-2 sm:col-span-1">
+                  <span class="material-symbols-outlined text-[24px] text-secondary">wallet</span>
+                  <span class="font-label-md text-[12px] mt-1">Google Pay</span>
+                </button>
+              </div>
+              <p class="font-body-sm text-[11px] text-on-surface-variant">
+                Ao clicar em <strong>Finalizar e Pagar</strong>, o Gateway Virtual Sandbox abrirá para você simular a aprovação ou recusa da transação.
+              </p>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5 lg:sticky lg:top-24 bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-md flex flex-col gap-space-md">
+            <h3 class="font-title-md text-title-md text-on-surface pb-2 border-b border-surface-variant">Revisão Detalhada do Pedido</h3>
+
+            <div id="revisao-itens-pagamento" class="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1 text-body-sm"></div>
+
+            <div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-1.5 text-[12px]">
+              <div id="revisao-entrega-pagamento" class="text-on-surface-variant"></div>
+              <div id="revisao-embalagem-pagamento" class="text-on-surface-variant"></div>
+            </div>
+
+            <div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5 text-on-surface">
+              <div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+                <span>Subtotal</span>
+                <span id="revisao-subtotal-pagamento">R$ 0,00</span>
+              </div>
+              <div class="flex items-center justify-between font-body-sm text-body-sm text-tertiary">
+                <span>Desconto Combo</span>
+                <span id="revisao-desconto-pagamento">- R$ 0,00</span>
+              </div>
+              <div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+                <span>Entrega Express</span>
+                <span id="revisao-frete-pagamento">R$ 0,00</span>
+              </div>
+              <div class="h-[1px] bg-surface-variant my-1"></div>
+              <div class="flex items-center justify-between text-on-surface">
+                <span class="font-title-md text-title-md font-bold">Total a Pagar</span>
+                <span id="revisao-total-pagamento" class="font-price-tag text-price-tag text-primary">R$ 0,00</span>
+              </div>
+            </div>
+
+            <div id="alerta-checkout" class="hidden bg-error-container text-on-error-container px-3 py-2.5 rounded-lg font-body-sm text-body-sm font-medium flex items-start gap-2" role="alert">
+              <span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5">error</span>
+              <span id="alerta-checkout-texto"></span>
+            </div>
+
+            <button
+              type="button"
+              id="btn-finalizar-pedido"
+              onclick="submeterPedido()"
+              class="w-full py-3.5 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-lg flex items-center justify-between transition-all group"
+            >
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[20px]">lock</span>
+                <span class="font-semibold">Finalizar e Pagar</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span id="btn-finalizar-valor" class="font-bold">R$ 0,00</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+              </div>
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <!-- === Tela 4: Pedidos & Rastreamento === -->
+      <section id="tela-pedidos" class="hidden flex flex-col gap-space-lg min-w-0">
+        <div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest rounded-xl px-space-md py-space-sm shadow-sm">
+          <button type="button" onclick="navegarParaTela('vitrine')" class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:underline">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Voltar para a Loja</span>
+          </button>
+          <span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md font-semibold">
+            3. Acompanhamento &amp; Rastreamento
+          </span>
+        </div>
+
+        <section id="meus-pedidos-sec" class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-space-md">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-variant">
+            <div>
+              <span class="font-label-md text-[11px] uppercase tracking-wider text-primary font-semibold">Logística &amp; Acompanhamento em Tempo Real</span>
+              <h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Rastrear Entrega e Pedidos Realizados</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <input
+                type="text"
+                id="input-codigo-rastreio"
+                placeholder="Código (ex: CG-2026-123456)"
+                class="bg-surface-container-low rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary w-48 sm:w-56"
+              />
+              <button
+                type="button"
+                onclick="buscarPedidoPorCodigoInput()"
+                class="px-3.5 py-2 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-md text-label-md hover:opacity-90 transition-opacity shrink-0"
+              >
+                Consultar
+              </button>
+            </div>
+          </div>
+
+          <div id="painel-pedido-ativo" class="hidden bg-surface-container-low rounded-xl p-space-md border border-outline-variant/60 flex flex-col gap-space-md"></div>
+
+          <div class="flex flex-col gap-2">
+            <h3 class="font-label-lg text-label-lg text-on-surface">Últimos Pedidos Registrados</h3>
+            <div id="lista-pedidos-recentes" class="flex flex-col gap-2">
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Nenhum pedido registrado ainda nesta sessão.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+    </div>
+
+    <!-- === Barra Mobile === -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md p-space-sm px-space-md shadow-[0_-4px_16px_rgba(44,26,29,0.08)] flex items-center justify-between gap-space-sm">
+      <div class="flex flex-col min-w-0">
+        <span class="font-body-sm text-[11px] text-on-surface-variant truncate" id="mobile-bar-qtd">Sacola (0 itens)</span>
+        <span class="font-price-tag text-price-tag text-primary" id="mobile-bar-total">R$ 0,00</span>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <button
+          type="button"
+          onclick="navegarParaTela('pedidos')"
+          class="py-2.5 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-[12px] flex items-center gap-1"
+        >
+          <span class="material-symbols-outlined text-[16px]">receipt_long</span>
+          <span>Pedidos</span>
+        </button>
+        <button
+          type="button"
+          onclick="navegarParaTela('sacola')"
+          class="py-2.5 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm flex items-center gap-1.5 transition-all"
+        >
+          <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          <span>Ver Sacola</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="w-full bg-surface-container-low mt-space-xl py-space-xl">
+    <div class="max-w-7xl mx-auto px-margin md:px-margin-desktop">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-space-xl pb-space-lg">
+        <div class="flex flex-col gap-space-sm md:col-span-2">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-9 h-9 rounded-full bg-primary-fixed text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[20px]">cake</span>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-on-surface">Cupcakes Gourmet</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-space-xs">
+            Confeitaria artesanal com ingredientes selecionados, receitas frescas do dia e proteção individual no transporte.
+          </p>
+          <div class="flex items-center gap-space-xs text-tertiary mt-space-xs">
+            <span class="material-symbols-outlined text-[18px]">eco</span>
+            <span class="font-label-md text-label-md">Proteção individual anti-transpiração inclusa</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-title-md text-on-surface">Atendimento</span>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Terça a Domingo: 10h às 20h<br />
+            São Paulo, Jardins &bull; Av. Paulista, 1578
+          </p>
+          <span class="font-body-md text-body-md text-on-surface-variant">contato@cupcakesgourmet.com.br</span>
+        </div>
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-title-md text-on-surface">Arquitetura &amp; APIs</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Arquitetura MVC em Node.js, Express e SQLite.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-1">
+            <a href="/api/cupcakes" target="_blank" rel="noopener" class="font-label-md text-[11px] text-primary hover:underline">API Catálogo</a>
+            <span class="text-outline">&bull;</span>
+            <a href="/api/catalogo/metadados" target="_blank" rel="noopener" class="font-label-md text-[11px] text-primary hover:underline">API Embalagens</a>
+            <span class="text-outline">&bull;</span>
+            <a href="/api/pedidos" target="_blank" rel="noopener" class="font-label-md text-[11px] text-primary hover:underline">API Pedidos</a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-space-md border-t border-surface-variant flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+        <p>&copy; 2026 Cupcakes Gourmet — Confeitaria Artesanal. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-space-md">
+          <button type="button" onclick="navegarParaTela('vitrine')" class="hover:text-on-surface transition-colors">Loja</button>
+          <button type="button" onclick="navegarParaTela('sacola')" class="hover:text-on-surface transition-colors">Sacola</button>
+          <button type="button" onclick="navegarParaTela('pedidos')" class="hover:text-on-surface transition-colors">Rastrear Pedido</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === Modal === -->
+  <div id="modal-detalhe-cupcake" class="hidden fixed inset-0 z-50 bg-on-surface/50 backdrop-blur-xs flex items-center justify-center p-4" onclick="fecharModalDetalhe()">
+    <div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg relative max-h-[90vh] overflow-y-auto shadow-2xl" onclick="event.stopPropagation()">
+      <button type="button" onclick="fecharModalDetalhe()" aria-label="Fechar detalhes" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+      <div id="conteudo-modal-cupcake"></div>
+    </div>
+  </div>
+
+  <!-- === Modal Sandbox Pagamento === -->
+  <div id="modal-sandbox-pagamento" class="hidden fixed inset-0 z-50 bg-on-surface/60 backdrop-blur-xs flex items-center justify-center p-4" onclick="fecharModalSandbox()">
+    <div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-lg relative max-h-[90vh] overflow-y-auto shadow-2xl" onclick="event.stopPropagation()">
+      <button type="button" onclick="fecharModalSandbox()" aria-label="Fechar sandbox de pagamento" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+      <div id="conteudo-modal-sandbox"></div>
+    </div>
+  </div>
+
+  <!-- === Toast === -->
+  <div id="toast-container" class="fixed bottom-20 lg:bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 pointer-events-none" aria-live="assertive"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
